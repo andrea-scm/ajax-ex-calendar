@@ -1,0 +1,49 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container{
+  position: relative;
+}
+
+h1{
+  margin-top: 20px;
+  text-align: center;
+}
+
+button{
+  position: absolute;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.prev_month{
+  left: 80px;
+  top: 75px;
+}
+
+.next_month{
+  right: 105px;
+  top: 75px;
+}
+
+.calendar{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 80px;
+}
+
+li{
+  padding: 30px;
+  list-style-type: none;
+  border: 1px solid rgba(0,0,0, .1);
+  width: 150px;
+}
+
+.red{
+  color: red;
+}
