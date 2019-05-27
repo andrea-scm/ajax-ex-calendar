@@ -9,7 +9,7 @@ $(document).ready(function () {
 
   //vado avanti di mese
   $('.next_month').click(function () {
-    nextMonth(date)
+    nextMonth(date,this)
     callApi(date);
   });
 
@@ -53,10 +53,10 @@ $(document).ready(function () {
       //reimposto l'html di calendar vuoto in modo che la funzione chiama nella riga successiva va ad appendere poi i giorni del mese successivo
       $('.calendar').html('');
       monthComplier(date);
-      $(this).attr('disabled', false)
+      $('.next_month').attr('disabled', false)
       $('.prev_month').attr('disabled', false)
     }else {
-      $(this).attr('disabled', true)
+      $('.next_month').attr('disabled', true)
     }
   }
 
@@ -66,10 +66,10 @@ $(document).ready(function () {
       //reimposto l'html di calendar vuoto in modo che la funzione chiama nella riga successiva va ad appendere poi i giorni del mese precedente
       $('.calendar').html('');
       monthComplier(date);
-      $(this).attr('disabled', false)
+      $('.prev_month').attr('disabled', false)
       $('.next_month').attr('disabled', false)
     }else {
-      $(this).attr('disabled', true)
+      $('.prev_month').attr('disabled', true)
     }
   }
 
