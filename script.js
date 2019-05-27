@@ -35,9 +35,10 @@ $(document).ready(function () {
           for (var i = 0; i < holidays.response.length; i++) {
             if(current_day.includes(holidays.response[i].date)){
               $(this).addClass('red');
+              $(this).find('.festività').text(holidays.response[i].name);
             };
-          }
-        })
+          };
+        });
       },
       'error': function () {
         alert('errore');
